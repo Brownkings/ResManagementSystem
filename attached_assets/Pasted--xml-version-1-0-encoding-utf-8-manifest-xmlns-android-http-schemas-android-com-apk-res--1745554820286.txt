@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.spu.restaurantmanagementsystem">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".MainActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".RegisterActivity" />
+
+        <!-- Customer Activities -->
+        <activity android:name=".customer.CustomerDashboardActivity" />
+        <activity android:name=".customer.ReservationActivity" />
+        <activity android:name=".customer.MenuBrowseActivity" />
+        <activity android:name=".customer.FeedbackActivity" />
+
+        <!-- Waiter Activities -->
+        <activity android:name=".waiter.WaiterDashboardActivity" />
+        <activity android:name=".waiter.OrderActivity" />
+        <activity android:name=".waiter.OrderActivity$OrderDetailsActivity" />
+        <activity android:name=".waiter.TableAssignmentActivity" />
+
+        <!-- Chef Activities -->
+        <activity android:name=".chef.ChefDashboardActivity" />
+        <activity android:name=".chef.OrderViewActivity" />
+
+        <!-- Manager Activities -->
+        <activity android:name=".manager.ManagerDashboardActivity" />
+        <activity android:name=".manager.MenuManagementActivity" />
+        <activity android:name=".manager.ReservationManagementActivity" />
+        <activity android:name=".manager.InventoryActivity" />
+        <activity android:name=".manager.StaffManagementActivity" />
+        <activity android:name=".manager.ReportsActivity" />
+
+    </application>
+
+</manifest>

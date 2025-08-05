@@ -1,0 +1,52 @@
+{
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null && (root.child('users').child(auth.uid).child('role').val() === 'Manager' || root.child('users').child(auth.uid).child('role').val() === 'manager')",
+    
+    "users": {
+      "$uid": {
+        ".read": "auth != null && (auth.uid === $uid || root.child('users').child(auth.uid).child('role').val() === 'Manager' || root.child('users').child(auth.uid).child('role').val() === 'manager' || root.child('users').child(auth.uid).child('role').val() === 'Waiter' || root.child('users').child(auth.uid).child('role').val() === 'waiter')",
+        ".write": "auth != null && (auth.uid === $uid || root.child('users').child(auth.uid).child('role').val() === 'Manager' || root.child('users').child(auth.uid).child('role').val() === 'manager')",
+        "role": {
+          ".write": "auth != null && (root.child('users').child(auth.uid).child('role').val() === 'Manager' || root.child('users').child(auth.uid).child('role').val() === 'manager')"
+        }
+      }
+    },
+    
+    "menu": {
+      ".read": "auth != null",
+      ".write": "auth != null && root.child('users').child(auth.uid).child('role').val() === 'Manager'"
+    },
+    
+    "orders": {
+      ".read": "auth != null",
+      ".write": "auth != null",
+      "$orderId": {
+        ".read": "auth != null && (data.child('customerId').val() === auth.uid || root.child('users').child(auth.uid).child('role').val() === 'Waiter' || root.child('users').child(auth.uid).child('role').val() === 'Chef' || root.child('users').child(auth.uid).child('role').val() === 'Manager')",
+        ".write": "auth != null && (data.child('customerId').val() === auth.uid || root.child('users').child(auth.uid).child('role').val() === 'Waiter' || root.child('users').child(auth.uid).child('role').val() === 'Manager')",
+        "status": {
+          ".write": "auth != null && (root.child('users').child(auth.uid).child('role').val() === 'Chef' || root.child('users').child(auth.uid).child('role').val() === 'Waiter' || root.child('users').child(auth.uid).child('role').val() === 'Manager')"
+        }
+      }
+    },
+    
+    "inventory": {
+      ".read": "auth != null && (root.child('users').child(auth.uid).child('role').val() === 'Chef' || root.child('users').child(auth.uid).child('role').val() === 'Manager')",
+      ".write": "auth != null && root.child('users').child(auth.uid).child('role').val() === 'Manager'"
+    },
+    
+    "reservations": {
+      ".read": "auth != null",
+      ".write": "auth != null",
+      "$reservationId": {
+        ".read": "auth != null && (data.child('customerId').val() === auth.uid || root.child('users').child(auth.uid).child('role').val() === 'Waiter' || root.child('users').child(auth.uid).child('role').val() === 'Chef' || root.child('users').child(auth.uid).child('role').val() === 'Manager')",
+        ".write": "auth != null && (data.child('customerId').val() === auth.uid || root.child('users').child(auth.uid).child('role').val() === 'Waiter' || root.child('users').child(auth.uid).child('role').val() === 'Manager')"
+      }
+    },
+    
+    "tables": {
+      ".read": "auth != null",
+      ".write": "auth != null && (root.child('users').child(auth.uid).child('role').val() === 'Waiter' || root.child('users').child(auth.uid).child('role').val() === 'Manager')"
+    }
+  }
+}

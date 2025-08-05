@@ -1,0 +1,144 @@
+package com.spu.restaurantmanagementsystem.waiter;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.spu.restaurantmanagementsystem.LoginActivity;
+import com.spu.restaurantmanagementsystem.R;
+import com.spu.restaurantmanagementsystem.utils.FirebaseUtil;
+
+public class WaiterDashboardActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private static final String TAG = "WaiterDashboardActivity";
+    private TextView welcomeTextView;
+    private CardView newOrderCard, myOrdersCard, tableAssignmentCard;
+    private FirebaseFirestore db;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_waiter_dashboard);
+
+        // Initialize Firestore
+        db = FirebaseFirestore.getInstance();
+
+        // Initialize UI components
+        welcomeTextView = findViewById(R.id.tv_welcome);
+        if (welcomeTextView == null) {
+            Log.w(TAG, "Warning: tv_welcome TextView not found in layout");
+        }
+
+        // Using resource IDs with null checks
+        try {
+            int takeOrderCardId = getResources().getIdentifier("card_new_order", "id", getPackageName());
+            int viewOrdersCardId = getResources().getIdentifier("card_my_orders", "id", getPackageName());
+            int viewTablesCardId = getResources().getIdentifier("card_table_assignment", "id", getPackageName());
+
+            Log.d(TAG, "Looking for card IDs: " + takeOrderCardId + ", " + viewOrdersCardId + ", " + viewTablesCardId);
+
+            newOrderCard = findViewById(takeOrderCardId);
+            myOrdersCard = findViewById(viewOrdersCardId);
+            tableAssignmentCard = findViewById(viewTablesCardId);
+
+            // Set click listeners only if views are not null
+            if (newOrderCard != null) {
+                newOrderCard.setOnClickListener(this);
+            } else {
+                Log.w(TAG, "Warning: card_new_order CardView not found in layout");
+            }
+
+            if (myOrdersCard != null) {
+                myOrdersCard.setOnClickListener(this);
+            } else {
+                Log.w(TAG, "Warning: card_my_orders CardView not found in layout");
+            }
+
+            if (tableAssignmentCard != null) {
+                tableAssignmentCard.setOnClickListener(this);
+            } else {
+                Log.w(TAG, "Warning: card_table_assignment CardView not found in layout");
+            }
+        } catch (Exception e) {
+            Log.e(TAG, "Error initializing card views: " + e.getMessage(), e);
+            Toast.makeText(this, "Some features may not be available", Toast.LENGTH_SHORT).show();
+        }
+
+        // Set greeting with user's name
+        setGreeting();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_dashboard, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.action_logout) {
+            // Sign out from Firebase
+            FirebaseAuth.getInstance().signOut();
+
+            // Redirect to login
+            Intent intent = new Intent(WaiterDashboardActivity.this, LoginActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View v) {
+        try {
+            int id = v.getId();
+            int takeOrderCardId = getResources().getIdentifier("card_new_order", "id", getPackageName());
+            int viewOrdersCardId = getResources().getIdentifier("card_my_orders", "id", getPackageName());
+            int viewTablesCardId = getResources().getIdentifier("card_table_assignment", "id", getPackageName());
+
+            if (id == takeOrderCardId) {
+                Toast.makeText(this, "Take Order feature coming soon", Toast.LENGTH_SHORT).show();
+            } else if (id == viewOrdersCardId) {
+                Toast.makeText(this, "View Orders feature coming soon", Toast.LENGTH_SHORT).show();
+            } else if (id == viewTablesCardId) {
+                Toast.makeText(this, "View Reservations feature coming soon", Toast.LENGTH_SHORT).show();
+            }
+        } catch (Exception e) {
+            Log.e(TAG, "Error handling click: " + e.getMessage(), e);
+            Toast.makeText(this, "Action not available", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void setGreeting() {
+        try {
+            // Get current user
+            if (FirebaseUtil.getCurrentUser() != null && welcomeTextView != null) {
+                String email = FirebaseUtil.getCurrentUser().getEmail();
+                // Extract name from email (temporary solution)
+                if (email != null && email.contains("@")) {
+                    String name = email.substring(0, email.indexOf('@'));
+                    welcomeTextView.setText("Welcome, " + name);
+                } else {
+                    welcomeTextView.setText("Welcome, Waiter");
+                }
+            }
+        } catch (Exception e) {
+            Log.e(TAG, "Error setting greeting: " + e.getMessage(), e);
+        }
+    }
+}

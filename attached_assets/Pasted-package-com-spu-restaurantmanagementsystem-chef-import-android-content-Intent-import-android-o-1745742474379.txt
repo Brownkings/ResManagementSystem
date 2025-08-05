@@ -1,0 +1,114 @@
+package com.spu.restaurantmanagementsystem.chef;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.spu.restaurantmanagementsystem.LoginActivity;
+import com.spu.restaurantmanagementsystem.R;
+import com.spu.restaurantmanagementsystem.utils.FirebaseUtil;
+
+public class ChefDashboardActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private TextView greetingTextView;
+    private CardView pendingOrdersCard, completedOrdersCard, viewMenuCard;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_chef_dashboard);
+
+        // Set up toolbar
+        setSupportActionBar(findViewById(R.id.toolbar));
+        getSupportActionBar().setTitle(R.string.title_chef_dashboard);
+
+        // Initialize UI components
+        greetingTextView = findViewById(R.id.greeting_text);
+        pendingOrdersCard = findViewById(R.id.pending_orders_card);
+        completedOrdersCard = findViewById(R.id.completed_orders_card);
+        viewMenuCard = findViewById(R.id.view_menu_card);
+
+        // Set click listeners
+        pendingOrdersCard.setOnClickListener(this);
+        completedOrdersCard.setOnClickListener(this);
+        viewMenuCard.setOnClickListener(this);
+
+        // Set greeting with user's name
+        setGreeting();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_dashboard, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.action_logout) {
+            // Sign out from Firebase
+            FirebaseAuth.getInstance().signOut();
+
+            // Redirect to login
+            Intent intent = new Intent(ChefDashboardActivity.this, LoginActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View v) {
+        Intent intent = null;
+
+        int id = v.getId();
+        if (id == R.id.pending_orders_card) {
+            intent = new Intent(this, PendingOrdersActivity.class);
+        } else if (id == R.id.completed_orders_card) {
+            intent = new Intent(this, CompletedOrdersActivity.class);
+        } else if (id == R.id.view_menu_card) {
+            intent = new Intent(this, ViewMenuActivity.class);
+        }
+
+        if (intent != null) {
+            startActivity(intent);
+        }
+    }
+
+    private void setGreeting() {
+        // Get current user
+        if (FirebaseUtil.getCurrentUser() != null) {
+            String email = FirebaseUtil.getCurrentUser().getEmail();
+            // Extract name from email (temporary solution)
+            String name = email.substring(0, email.indexOf('@'));
+            greetingTextView.setText("Welcome, " + name);
+
+            // Later, we'll replace this with actual user profile data from Firestore
+            /*
+            FirebaseUtil.getCurrentUserDocument().get()
+                    .addOnSuccessListener(documentSnapshot -> {
+                        if (documentSnapshot.exists()) {
+                            String name = documentSnapshot.getString(Constants.FIELD_USER_NAME);
+                            if (name != null && !name.isEmpty()) {
+                                greetingTextView.setText("Welcome, " + name);
+                            }
+                        }
+                    })
+                    .addOnFailureListener(e ->
+                        Toast.makeText(this, "Failed to get user data", Toast.LENGTH_SHORT).show());
+            */
+        }
+    }
+}

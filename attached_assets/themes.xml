@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark theme (night) -->
+    <style name="Theme.RestaurantManagementSystem" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- No Action Bar theme -->
+    <style name="Theme.RestaurantManagementSystem.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <!-- Login and Authentication Strings -->
+        <string name="hint_email">Email</string>
+        <string name="hint_password">Password</string>
+        <string name="btn_login">Login</string>
+        <string name="btn_register">Register</string>
+        <string name="select_role">Select Your Role</string>
+        <string name="role_prompt">Continue as:</string>
+        <string name="authenticate_as">Authenticate as</string>
+        <string name="select_user_role">Select User Role</string>
+        <string name="button_continue">Continue</string>
+    </style>
+</resources>

@@ -1,0 +1,135 @@
+---------------------------- PROCESS STARTED (8413) for package com.spu.restaurantmanagementsystem ----------------------------
+2025-04-27 10:18:27.818  8413-8413  CompatChangeReporter    com.spu.restaurantmanagementsystem   D  Compat change id reported: 242716250; UID 10219; state: ENABLED
+2025-04-27 10:18:27.891  8413-8413  ziparchive              com.spu.restaurantmanagementsystem   W  Unable to open '/data/data/com.spu.restaurantmanagementsystem/code_cache/.overlay/base.apk/classes9.dm': No such file or directory
+2025-04-27 10:18:27.896  8413-8413  ziparchive              com.spu.restaurantmanagementsystem   W  Unable to open '/data/app/~~6_HNazcG3jzIVQXaWLZL7g==/com.spu.restaurantmanagementsystem-6Ukra2KVaMjBbFpFFzDZhw==/base.dm': No such file or directory
+2025-04-27 10:18:27.896  8413-8413  ziparchive              com.spu.restaurantmanagementsystem   W  Unable to open '/data/app/~~6_HNazcG3jzIVQXaWLZL7g==/com.spu.restaurantmanagementsystem-6Ukra2KVaMjBbFpFFzDZhw==/base.dm': No such file or directory
+2025-04-27 10:18:28.255  8413-8413  nativeloader            com.spu.restaurantmanagementsystem   D  Configuring clns-7 for other apk /data/app/~~6_HNazcG3jzIVQXaWLZL7g==/com.spu.restaurantmanagementsystem-6Ukra2KVaMjBbFpFFzDZhw==/base.apk. target_sdk_version=34, uses_libraries=, library_path=/data/app/~~6_HNazcG3jzIVQXaWLZL7g==/com.spu.restaurantmanagementsystem-6Ukra2KVaMjBbFpFFzDZhw==/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.spu.restaurantmanagementsystem
+2025-04-27 10:18:28.331  8413-8413  GraphicsEnvironment     com.spu.restaurantmanagementsystem   V  Currently set values for:
+2025-04-27 10:18:28.331  8413-8413  GraphicsEnvironment     com.spu.restaurantmanagementsystem   V    angle_gl_driver_selection_pkgs=[]
+2025-04-27 10:18:28.332  8413-8413  GraphicsEnvironment     com.spu.restaurantmanagementsystem   V    angle_gl_driver_selection_values=[]
+2025-04-27 10:18:28.332  8413-8413  GraphicsEnvironment     com.spu.restaurantmanagementsystem   V  Global.Settings values are invalid: number of packages: 0, number of values: 0
+2025-04-27 10:18:28.333  8413-8413  GraphicsEnvironment     com.spu.restaurantmanagementsystem   V  Neither updatable production driver nor prerelease driver is supported.
+2025-04-27 10:18:28.452  8413-8413  FirebaseApp             com.spu.restaurantmanagementsystem   I  Device unlocked: initializing all Firebase APIs for app [DEFAULT]
+2025-04-27 10:18:28.462  8413-8413  CompatChangeReporter    com.spu.restaurantmanagementsystem   D  Compat change id reported: 3400644; UID 10219; state: ENABLED
+2025-04-27 10:18:28.482  8413-8413  FirebaseInitProvider    com.spu.restaurantmanagementsystem   I  FirebaseApp initialization successful
+2025-04-27 10:18:28.668  8413-8413  AppCompatDelegate       com.spu.restaurantmanagementsystem   D  Checking for metadata for AppLocalesMetadataHolderService : Service not found
+2025-04-27 10:18:28.820  8413-8413  anagementsystem         com.spu.restaurantmanagementsystem   W  Accessing hidden method Landroid/view/View;->computeFitSystemWindows(Landroid/graphics/Rect;Landroid/graphics/Rect;)Z (unsupported, reflection, allowed)
+2025-04-27 10:18:28.821  8413-8413  anagementsystem         com.spu.restaurantmanagementsystem   W  Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (unsupported, reflection, allowed)
+2025-04-27 10:18:28.995  8413-8413  HWUI                    com.spu.restaurantmanagementsystem   W  Unknown dataspace 0
+2025-04-27 10:18:29.081  8413-8430  EGL_emulation           com.spu.restaurantmanagementsystem   I  Opening libGLESv1_CM_emulation.so
+2025-04-27 10:18:29.083  8413-8430  EGL_emulation           com.spu.restaurantmanagementsystem   I  Opening libGLESv2_emulation.so
+2025-04-27 10:18:29.142  8413-8430  HWUI                    com.spu.restaurantmanagementsystem   W  Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+2025-04-27 10:18:29.142  8413-8430  HWUI                    com.spu.restaurantmanagementsystem   W  Failed to initialize 101010-2 format, error = EGL_SUCCESS
+2025-04-27 10:18:29.160  8413-8417  anagementsystem         com.spu.restaurantmanagementsystem   I  Compiler allocated 4219KB to compile void android.widget.TextView.<init>(android.content.Context, android.util.AttributeSet, int, int)
+2025-04-27 10:18:29.270  8413-8430  Gralloc4                com.spu.restaurantmanagementsystem   I  mapper 4.x is not supported
+2025-04-27 10:18:29.691  8413-8417  anagementsystem         com.spu.restaurantmanagementsystem   I  Compiler allocated 5174KB to compile void android.view.ViewRootImpl.performTraversals()
+2025-04-27 10:18:30.445  8413-8430  EGL_emulation           com.spu.restaurantmanagementsystem   D  app_time_stats: avg=11.22ms min=4.61ms max=34.82ms count=44
+2025-04-27 10:18:31.118  8413-8413  FirebaseAuth            com.spu.restaurantmanagementsystem   D  Notifying id token listeners about user ( qoAqUDvNBfQ7L4o9r0u49NKBc8k2 ).
+2025-04-27 10:18:31.411  8413-8444  DynamiteModule          com.spu.restaurantmanagementsystem   W  Local module descriptor class for com.google.android.gms.providerinstaller.dynamite not found.
+2025-04-27 10:18:31.448  8413-8430  EGL_emulation           com.spu.restaurantmanagementsystem   D  app_time_stats: avg=6.22ms min=2.63ms max=21.94ms count=59
+2025-04-27 10:18:31.458  8413-8444  DynamiteModule          com.spu.restaurantmanagementsystem   I  Considering local module com.google.android.gms.providerinstaller.dynamite:0 and remote module com.google.android.gms.providerinstaller.dynamite:0
+2025-04-27 10:18:31.460  8413-8444  ProviderInstaller       com.spu.restaurantmanagementsystem   W  Failed to load providerinstaller module: No acceptable module com.google.android.gms.providerinstaller.dynamite found. Local version is 0 and remote version is 0.
+2025-04-27 10:18:31.473  8413-8444  ApplicationLoaders      com.spu.restaurantmanagementsystem   D  Returning zygote-cached class loader: /system/framework/org.apache.http.legacy.jar
+2025-04-27 10:18:31.505  8413-8444  nativeloader            com.spu.restaurantmanagementsystem   D  Configuring clns-8 for other apk /system/framework/com.android.media.remotedisplay.jar. target_sdk_version=36, uses_libraries=ALL, library_path=/data/app/~~HsfdPSstP8Vd2LOnBkvybA==/com.google.android.gms-KOrxX_HW76MYi_FuZTYJXQ==/lib/x86_64:/data/app/~~HsfdPSstP8Vd2LOnBkvybA==/com.google.android.gms-KOrxX_HW76MYi_FuZTYJXQ==/base.apk!/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.gms
+2025-04-27 10:18:31.549  8413-8444  nativeloader            com.spu.restaurantmanagementsystem   D  Configuring clns-9 for other apk /system/framework/com.android.location.provider.jar. target_sdk_version=36, uses_libraries=ALL, library_path=/data/app/~~HsfdPSstP8Vd2LOnBkvybA==/com.google.android.gms-KOrxX_HW76MYi_FuZTYJXQ==/lib/x86_64:/data/app/~~HsfdPSstP8Vd2LOnBkvybA==/com.google.android.gms-KOrxX_HW76MYi_FuZTYJXQ==/base.apk!/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.gms
+2025-04-27 10:18:31.570  8413-8444  ApplicationLoaders      com.spu.restaurantmanagementsystem   D  Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
+2025-04-27 10:18:31.570  8413-8444  ApplicationLoaders      com.spu.restaurantmanagementsystem   D  Returning zygote-cached class loader: /system_ext/framework/androidx.window.sidecar.jar
+2025-04-27 10:18:31.627  8413-8444  anagementsystem         com.spu.restaurantmanagementsystem   W  Loading /data/app/~~HsfdPSstP8Vd2LOnBkvybA==/com.google.android.gms-KOrxX_HW76MYi_FuZTYJXQ==/oat/x86_64/base.odex non-executable as it requires an image which we failed to load
+2025-04-27 10:18:31.656  8413-8444  nativeloader            com.spu.restaurantmanagementsystem   D  Configuring clns-10 for other apk /data/app/~~HsfdPSstP8Vd2LOnBkvybA==/com.google.android.gms-KOrxX_HW76MYi_FuZTYJXQ==/base.apk. target_sdk_version=36, uses_libraries=, library_path=/data/app/~~HsfdPSstP8Vd2LOnBkvybA==/com.google.android.gms-KOrxX_HW76MYi_FuZTYJXQ==/lib/x86_64:/data/app/~~HsfdPSstP8Vd2LOnBkvybA==/com.google.android.gms-KOrxX_HW76MYi_FuZTYJXQ==/base.apk!/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.gms
+2025-04-27 10:18:31.791  8413-8444  ProviderInstaller       com.spu.restaurantmanagementsystem   W  Failed to report request stats: com.google.android.gms.common.security.ProviderInstallerImpl.reportRequestStats [class android.content.Context, long, long]
+2025-04-27 10:18:32.057  8413-8447  GoogleApiManager        com.spu.restaurantmanagementsystem   E  Failed to get service from broker.  (Ask Gemini)
+                                                                                                    java.lang.SecurityException: Unknown calling package name 'com.google.android.gms'.
+                                                                                                    	at android.os.Parcel.createExceptionOrNull(Parcel.java:3242)
+                                                                                                    	at android.os.Parcel.createException(Parcel.java:3226)
+                                                                                                    	at android.os.Parcel.readException(Parcel.java:3209)
+                                                                                                    	at android.os.Parcel.readException(Parcel.java:3151)
+                                                                                                    	at auhj.a(:com.google.android.gms@251434038@25.14.34 (260800-748828228):36)
+                                                                                                    	at aufq.z(:com.google.android.gms@251434038@25.14.34 (260800-748828228):143)
+                                                                                                    	at atmx.run(:com.google.android.gms@251434038@25.14.34 (260800-748828228):42)
+                                                                                                    	at android.os.Handler.handleCallback(Handler.java:959)
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:100)
+                                                                                                    	at ccce.ml(:com.google.android.gms@251434038@25.14.34 (260800-748828228):1)
+                                                                                                    	at ccce.dispatchMessage(:com.google.android.gms@251434038@25.14.34 (260800-748828228):5)
+                                                                                                    	at android.os.Looper.loopOnce(Looper.java:232)
+                                                                                                    	at android.os.Looper.loop(Looper.java:317)
+                                                                                                    	at android.os.HandlerThread.run(HandlerThread.java:85)
+2025-04-27 10:18:32.089  8413-8446  FlagRegistrar           com.spu.restaurantmanagementsystem   W  Failed to register com.google.android.gms.providerinstaller#com.spu.restaurantmanagementsystem (Ask Gemini)
+                                                                                                    exfn: 17: 17: API: Phenotype.API is not available on this device. Connection failed with: ConnectionResult{statusCode=DEVELOPER_ERROR, resolution=null, message=null}
+                                                                                                    	at exfp.a(:com.google.android.gms@251434038@25.14.34 (260800-748828228):13)
+                                                                                                    	at frxr.d(:com.google.android.gms@251434038@25.14.34 (260800-748828228):3)
+                                                                                                    	at frxt.run(:com.google.android.gms@251434038@25.14.34 (260800-748828228):130)
+                                                                                                    	at fsaa.execute(:com.google.android.gms@251434038@25.14.34 (260800-748828228):1)
+                                                                                                    	at fryb.f(:com.google.android.gms@251434038@25.14.34 (260800-748828228):1)
+                                                                                                    	at fryb.m(:com.google.android.gms@251434038@25.14.34 (260800-748828228):99)
+                                                                                                    	at fryb.r(:com.google.android.gms@251434038@25.14.34 (260800-748828228):17)
+                                                                                                    	at eptz.hC(:com.google.android.gms@251434038@25.14.34 (260800-748828228):35)
+                                                                                                    	at eeen.run(:com.google.android.gms@251434038@25.14.34 (260800-748828228):12)
+                                                                                                    	at fsaa.execute(:com.google.android.gms@251434038@25.14.34 (260800-748828228):1)
+                                                                                                    	at eeeo.b(:com.google.android.gms@251434038@25.14.34 (260800-748828228):18)
+                                                                                                    	at eefd.b(:com.google.android.gms@251434038@25.14.34 (260800-748828228):36)
+                                                                                                    	at eeff.d(:com.google.android.gms@251434038@25.14.34 (260800-748828228):25)
+                                                                                                    	at atkf.c(:com.google.android.gms@251434038@25.14.34 (260800-748828228):9)
+                                                                                                    	at atmv.q(:com.google.android.gms@251434038@25.14.34 (260800-748828228):48)
+                                                                                                    	at atmv.d(:com.google.android.gms@251434038@25.14.34 (260800-748828228):10)
+                                                                                                    	at atmv.g(:com.google.android.gms@251434038@25.14.34 (260800-748828228):185)
+                                                                                                    	at atmv.onConnectionFailed(:com.google.android.gms@251434038@25.14.34 (260800-748828228):2)
+                                                                                                    	at atmx.run(:com.google.android.gms@251434038@25.14.34 (260800-748828228):70)
+                                                                                                    	at android.os.Handler.handleCallback(Handler.java:959)
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:100)
+                                                                                                    	at ccce.ml(:com.google.android.gms@251434038@25.14.34 (260800-748828228):1)
+                                                                                                    	at ccce.dispatchMessage(:com.google.android.gms@251434038@25.14.34 (260800-748828228):5)
+                                                                                                    	at android.os.Looper.loopOnce(Looper.java:232)
+                                                                                                    	at android.os.Looper.loop(Looper.java:317)
+                                                                                                    	at android.os.HandlerThread.run(HandlerThread.java:85)
+                                                                                                    Caused by: atiu: 17: API: Phenotype.API is not available on this device. Connection failed with: ConnectionResult{statusCode=DEVELOPER_ERROR, resolution=null, message=null}
+                                                                                                    	at aufc.a(:com.google.android.gms@251434038@25.14.34 (260800-748828228):15)
+                                                                                                    	at atki.a(:com.google.android.gms@251434038@25.14.34 (260800-748828228):1)
+                                                                                                    	at atkf.c(:com.google.android.gms@251434038@25.14.34 (260800-748828228):5)
+                                                                                                    	at atmv.q(:com.google.android.gms@251434038@25.14.34 (260800-748828228):48) 
+                                                                                                    	at atmv.d(:com.google.android.gms@251434038@25.14.34 (260800-748828228):10) 
+                                                                                                    	at atmv.g(:com.google.android.gms@251434038@25.14.34 (260800-748828228):185) 
+                                                                                                    	at atmv.onConnectionFailed(:com.google.android.gms@251434038@25.14.34 (260800-748828228):2) 
+                                                                                                    	at atmx.run(:com.google.android.gms@251434038@25.14.34 (260800-748828228):70) 
+                                                                                                    	at android.os.Handler.handleCallback(Handler.java:959) 
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:100) 
+                                                                                                    	at ccce.ml(:com.google.android.gms@251434038@25.14.34 (260800-748828228):1) 
+                                                                                                    	at ccce.dispatchMessage(:com.google.android.gms@251434038@25.14.34 (260800-748828228):5) 
+                                                                                                    	at android.os.Looper.loopOnce(Looper.java:232) 
+                                                                                                    	at android.os.Looper.loop(Looper.java:317) 
+                                                                                                    	at android.os.HandlerThread.run(HandlerThread.java:85) 
+2025-04-27 10:18:32.162  8413-8444  nativeloader            com.spu.restaurantmanagementsystem   D  Load /data/app/~~HsfdPSstP8Vd2LOnBkvybA==/com.google.android.gms-KOrxX_HW76MYi_FuZTYJXQ==/base.apk!/lib/x86_64/libconscrypt_gmscore_jni.so using ns clns-10 from class loader (caller=/data/app/~~HsfdPSstP8Vd2LOnBkvybA==/com.google.android.gms-KOrxX_HW76MYi_FuZTYJXQ==/base.apk!classes3.dex): ok
+2025-04-27 10:18:32.179  8413-8444  NativeCrypto            com.spu.restaurantmanagementsystem   V  Registering com/google/android/gms/org/conscrypt/NativeCrypto's 312 native methods...
+2025-04-27 10:18:32.230  8413-8444  anagementsystem         com.spu.restaurantmanagementsystem   W  Accessing hidden method Ljava/security/spec/ECParameterSpec;->getCurveName()Ljava/lang/String; (unsupported, reflection, allowed)
+2025-04-27 10:18:32.300  8413-8448  anagementsystem         com.spu.restaurantmanagementsystem   W  Accessing hidden method Ldalvik/system/VMStack;->getStackClass2()Ljava/lang/Class; (unsupported, reflection, allowed)
+2025-04-27 10:18:32.362  8413-8448  exfb                    com.spu.restaurantmanagementsystem   I  Unable to retrieve flag snapshot for com.google.android.gms.providerinstaller#com.google.android.gms, using defaults.
+2025-04-27 10:18:32.452  8413-8430  EGL_emulation           com.spu.restaurantmanagementsystem   D  app_time_stats: avg=8.95ms min=3.88ms max=26.15ms count=56
+2025-04-27 10:18:32.510  8413-8444  ProviderInstaller       com.spu.restaurantmanagementsystem   I  Installed default security provider GmsCore_OpenSSL
+2025-04-27 10:18:32.947  8413-8455  TrafficStats            com.spu.restaurantmanagementsystem   D  tagSocket(137) with statsTag=0xffffffff, statsUid=-1
+2025-04-27 10:18:32.985  8413-8455  anagementsystem         com.spu.restaurantmanagementsystem   W  Accessing hidden field Ljava/net/Socket;->impl:Ljava/net/SocketImpl; (unsupported, reflection, allowed)
+2025-04-27 10:18:33.321  8413-8455  anagementsystem         com.spu.restaurantmanagementsystem   W  Accessing hidden method Ljava/security/spec/ECParameterSpec;->setCurveName(Ljava/lang/String;)V (unsupported, reflection, allowed)
+2025-04-27 10:18:33.466  8413-8430  EGL_emulation           com.spu.restaurantmanagementsystem   D  app_time_stats: avg=10.90ms min=3.44ms max=29.45ms count=56
+2025-04-27 10:18:33.743  8413-8443  Firestore               com.spu.restaurantmanagementsystem   W  (24.10.0) [WatchStream]: (189abf5) Stream closed with status: Status{code=PERMISSION_DENIED, description=Cloud Firestore API has not been used in project restaurantmanagementsyst-6fe07 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=restaurantmanagementsyst-6fe07 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry., cause=null}.
+2025-04-27 10:18:33.745  8413-8443  Firestore               com.spu.restaurantmanagementsystem   W  (24.10.0) [OnlineStateTracker]: Could not reach Cloud Firestore backend. Connection failed 1 times. Most recent error: Status{code=PERMISSION_DENIED, description=Cloud Firestore API has not been used in project restaurantmanagementsyst-6fe07 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=restaurantmanagementsyst-6fe07 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry., cause=null}
+                                                                                                    This typically indicates that your device does not have a healthy Internet connection at the moment. The client will operate in offline mode until it is able to successfully connect to the backend.
+2025-04-27 10:18:34.456  8413-8462  ProfileInstaller        com.spu.restaurantmanagementsystem   D  Installing profile for com.spu.restaurantmanagementsystem
+2025-04-27 10:18:34.479  8413-8430  EGL_emulation           com.spu.restaurantmanagementsystem   D  app_time_stats: avg=9.61ms min=3.97ms max=25.52ms count=55
+2025-04-27 10:18:34.832  8413-8413  AssistStructure         com.spu.restaurantmanagementsystem   I  Flattened final assist data: 3000 bytes, containing 1 windows, 18 views
+2025-04-27 10:18:35.426  8413-8413  VRI[SplashActivity]     com.spu.restaurantmanagementsystem   D  visibilityChanged oldVisibility=true newVisibility=false
+2025-04-27 10:18:35.498  8413-8413  WindowOnBackDispatcher  com.spu.restaurantmanagementsystem   W  sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda11@b115cbe
+2025-04-27 10:18:42.366  8413-8447  GoogleApiManager        com.spu.restaurantmanagementsystem   E  Failed to get service from broker.  (Ask Gemini)
+                                                                                                    java.lang.SecurityException: Unknown calling package name 'com.google.android.gms'.
+                                                                                                    	at android.os.Parcel.createExceptionOrNull(Parcel.java:3242)
+                                                                                                    	at android.os.Parcel.createException(Parcel.java:3226)
+                                                                                                    	at android.os.Parcel.readException(Parcel.java:3209)
+                                                                                                    	at android.os.Parcel.readException(Parcel.java:3151)
+                                                                                                    	at auhj.a(:com.google.android.gms@251434038@25.14.34 (260800-748828228):36)
+                                                                                                    	at aufq.z(:com.google.android.gms@251434038@25.14.34 (260800-748828228):143)
+                                                                                                    	at atmx.run(:com.google.android.gms@251434038@25.14.34 (260800-748828228):42)
+                                                                                                    	at android.os.Handler.handleCallback(Handler.java:959)
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:100)
+                                                                                                    	at ccce.ml(:com.google.android.gms@251434038@25.14.34 (260800-748828228):1)
+                                                                                                    	at ccce.dispatchMessage(:com.google.android.gms@251434038@25.14.34 (260800-748828228):5)
+                                                                                                    	at android.os.Looper.loopOnce(Looper.java:232)
+                                                                                                    	at android.os.Looper.loop(Looper.java:317)
+                                                                                                    	at android.os.HandlerThread.run(HandlerThread.java:85)
+2025-04-27 10:18:42.380  8413-8418  anagementsystem         com.spu.restaurantmanagementsystem   W  Cleared Reference was only reachable from finalizer (only reported once)

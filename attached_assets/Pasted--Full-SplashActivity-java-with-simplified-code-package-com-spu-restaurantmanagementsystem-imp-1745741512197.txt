@@ -1,0 +1,90 @@
+// Full SplashActivity.java with simplified code
+package com.spu.restaurantmanagementsystem;
+
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.os.Handler;
+import androidx.appcompat.app.AppCompatActivity;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
+import android.util.Log;
+import android.widget.Toast;
+
+public class SplashActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_splash);
+
+        // Initialize SharedPreferences
+        SharedPreferences sharedPreferences = getSharedPreferences("restaurant_prefs", MODE_PRIVATE);
+
+        // Check if this is a first-time user
+        boolean isFirstTimeUser = sharedPreferences.getBoolean("first_time", true);
+
+        // Handler to delay for splash screen (2000ms = 2 seconds)
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                // Check if user is already logged in
+                FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+
+                if (currentUser != null) {
+                    // User is logged in, get their role from Firestore
+                    FirebaseFirestore.getInstance().collection("users")
+                            .document(currentUser.getUid())
+                            .get()
+                            .addOnSuccessListener(documentSnapshot -> {
+                                if (documentSnapshot.exists()) {
+                                    String userRole = documentSnapshot.getString("role");
+                                    navigateToRoleSpecificDashboard(currentUser.getUid(), userRole);
+                                } else {
+                                    // User document not found, go to role selection
+                                    navigateToLogin();
+                                }
+                            })
+                            .addOnFailureListener(e -> navigateToLogin());
+                } else {
+                    // No user logged in, check if first time
+                    if (isFirstTimeUser) {
+                        // First time user, direct to register page
+                        startActivity(new Intent(SplashActivity.this, RegisterActivity.class));
+                        sharedPreferences.edit().putBoolean("first_time", false).apply();
+                    } else {
+                        // Returning user, direct to login
+                        startActivity(new Intent(SplashActivity.this, LoginActivity.class));
+                    }
+                    finish();
+                }
+            }
+        }, 2000); // Delay for 2 seconds
+    }
+
+    
+
+    private void navigateToRoleSpecificDashboard(String userId, String userRole) {
+        try {
+            // For now, redirect all roles to CustomerDashboardActivity
+            Intent intent = new Intent(SplashActivity.this, com.spu.restaurantmanagementsystem.customer.CustomerDashboardActivity.class);
+
+            // Display a message about the redirection
+            Toast.makeText(this, userRole + " dashboard coming soon! Redirecting to Customer dashboard.",
+                    Toast.LENGTH_LONG).show();
+
+            // Add extras
+            intent.putExtra("extra_user_id", userId);
+            intent.putExtra("extra_user_role", userRole);
+
+            startActivity(intent);
+        } catch (Exception e) {
+            Log.e("SplashActivity", "Error: " + e.getMessage());
+            Toast.makeText(this, "Error: " + e.getMessage(), Toast.LENGTH_LONG).show();
+            startActivity(new Intent(SplashActivity.this, LoginActivity.class));
+        } finally {
+            finish();
+        }
+    }
+}

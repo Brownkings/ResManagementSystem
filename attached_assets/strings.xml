@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Restaurant Management System</string>
+
+    <!-- Validation Error Messages -->
+    <string name="error_name_required">Name is required</string>
+    <string name="error_description_required">Description is required</string>
+    <string name="error_price_required">Price is required</string>
+    <string name="error_price_positive">Price must be positive</string>
+    <string name="error_price_invalid">Invalid price</string>
+
+    <!-- Common Dialog Strings -->
+    <string name="dialog_add">Add</string>
+    <string name="dialog_edit">Edit</string>
+    <string name="dialog_delete">Delete</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="dialog_save">Save</string>
+    <string name="dialog_update">Update</string>
+    <string name="dialog_confirm">Confirm</string>
+
+    <!-- Action Strings -->
+    <string name="action_delete">Delete</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_add">Add</string>
+    <string name="action_confirm">Confirm</string>
+    <string name="action_update">Update</string>
+    <string name="delete_menu_item">Delete Menu Item</string>
+    <string name="delete_menu_confirmation">Are you sure you want to delete this menu item?</string>
+    <string name="menu_item_deleted">Menu item deleted successfully</string>
+    <string name="menu_item_delete_error">Error deleting menu item: %1$s</string>
+    <string name="menu_item_added">Menu item added successfully</string>
+    <string name="menu_item_add_error">Error adding menu item: %1$s</string>
+    <string name="menu_item_updated">Menu item updated successfully</string>
+    <string name="menu_item_update_error">Error updating menu item: %1$s</string>
+    <string name="menu_items_empty">No menu items found.</string>
+    <string name="menu_items_load_error">Error loading menu items: %1$s</string>
+
+    <!-- Menu Management Strings -->
+    <string name="menu_management">Menu Management</string>
+
+    <string name="add_menu_item">Add Menu Item</string>
+    <string name="edit_menu_item">Edit Menu Item</string>
+    <string name="menu_item_name">Item Name</string>
+    <string name="menu_item_description">Description</string>
+    <string name="menu_item_price">Price</string>
+    <string name="menu_item_category">Category</string>
+    <string name="menu_item_image">Image URL</string>
+    <string name="menu_item_available">Available</string>
+
+    <!-- Reservation Strings -->
+    <string name="reservations">Reservations</string>
+    <string name="add_reservation">Add Reservation</string>
+    <string name="edit_reservation">Edit Reservation</string>
+    <string name="customer_name">Customer Name</string>
+    <string name="customer_phone">Phone Number</string>
+    <string name="party_size">Party Size</string>
+    <string name="reservation_date">Date</string>
+    <string name="reservation_time">Time</string>
+    <string name="special_requests">Special Requests</string>
+    <string name="reservation_status">Status</string>
+
+    <!-- Common actions -->
+    <string name="action_save">Save</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_logout">Logout</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Error messages -->
+    <string name="error_login_failed">Login failed. Please check your credentials.</string>
+    <string name="error_registration_failed">Registration failed. Please try again.</string>
+    <string name="error_data_load">Failed to load data. Please try again.</string>
+
+    <!-- Dashboard titles -->
+    <string name="title_chef_dashboard">Chef Dashboard</string>
+    <string name="title_waiter_dashboard">Waiter Dashboard</string>
+    <string name="title_manager_dashboard">Manager Dashboard</string>
+    <string name="title_customer_dashboard">Customer Dashboard</string>
+
+    <!-- Chef section -->
+    <string name="title_pending_orders">Pending Orders</string>
+    <string name="title_completed_orders">Completed Orders</string>
+    <string name="title_view_menu">Menu Items</string>
+    <string name="btn_start_cooking">Start Cooking</string>
+    <string name="btn_mark_ready">Ready to Serve</string>
+
+    <!-- Waiter section -->
+    <string name="title_table_management">Table Management</string>
+    <string name="title_active_orders">Active Orders</string>
+    <string name="title_reservations">Reservations</string>
+    <string name="btn_assign_table">Assign Table</string>
+    <string name="btn_take_order">Take Order</string>
+    <string name="btn_mark_served">Mark as Served</string>
+
+    <!-- Manager section -->
+    <string name="title_staff_management">Staff Management</string>
+    <string name="title_inventory">Inventory</string>
+    <string name="title_menu_management">Menu Management</string>
+    <string name="title_reports">Reports</string>
+    <string name="btn_add_staff">Add Staff</string>
+    <string name="btn_edit_menu">Edit Menu</string>
+    <string name="btn_update_inventory">Update Inventory</string>
+
+    <!-- Customer section -->
+    <string name="title_place_order">Place Order</string>
+    <string name="title_my_orders">My Orders</string>
+    <string name="title_make_reservation">Make a Reservation</string>
+    <string name="title_my_reservations">My Reservations</string>
+    <string name="btn_add_to_cart">Add to Cart</string>
+    <string name="btn_place_order">Place Order</string>
+    <string name="btn_reserve_table">Reserve Table</string>
+    <string name="welcome_customer">Welcome to our Restaurant</string>
+    <string name="active_reservations_0">Active Reservations: 0</string>
+    <string name="table_reservations">Table Reservations</string>
+    <string name="make_a_reservation_or_view_your_existing_ones">Make a reservation or view your existing ones</string>
+    <string name="browse_menu">Browse Menu</string>
+    <string name="view_our_delicious_food_and_drinks_menu">View our delicious food and drinks menu</string>
+    <string name="provide_feedback">Provide Feedback</string>
+    <string name="tell_us_about_your_dining_experience">Tell us about your dining experience</string>
+    <string name="reservations_icon">Reservations icon</string>
+    <string name="menu_icon">Menu icon</string>
+    <string name="feedback_icon">Feedback icon</string>
+
+    <!-- Authentication -->
+    <string name="title_login">Login</string>
+    <string name="title_register">Register</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_name">Full Name</string>
+    <string name="hint_role">Select Role</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_register">Register</string>
+    <string name="text_no_account">Don\'t have an account? Register here</string>
+    <string name="text_have_account">Already have an account? Login here</string>
+    <string name="select_role">Select Your Role</string>
+    <string name="role_prompt">Continue as:</string>
+    <string name="authenticate_as">Authenticate as</string>
+    <string name="select_user_role">Select User Role</string>
+    <string name="button_continue">Continue</string>
+    <string name="role_customer">Customer</string>
+    <string name="role_waiter">Waiter</string>
+    <string name="role_chef">Chef</string>
+    <string name="role_manager">Manager</string>
+    <string name="logo_description">Restaurant logo</string>
+</resources>

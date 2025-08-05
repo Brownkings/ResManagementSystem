@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+<color name="colorPrimary">#2196F3</color>
+<color name="colorPrimaryDark">#1976D2</color>
+<color name="colorAccent">#FF4081</color>
+<color name="colorTextPrimary">#212121</color>
+<color name="colorTextSecondary">#757575</color>
+<color name="colorBackground">#FAFAFA</color>
+<color name="colorDivider">#EEEEEE</color>
+<color name="black">#000000</color>
+<color name="white">#FFFFFF</color>
+<color name="ic_launcher_background">#2196F3</color>
+
+<!-- Status Colors -->
+<color name="statusPending">#FFC107</color>   <!-- Amber -->
+<color name="statusConfirmed">#4CAF50</color> <!-- Green -->
+<color name="statusCancelled">#F44336</color> <!-- Red -->
+<color name="statusCompleted">#2196F3</color> <!-- Blue -->
+<color name="statusInProgress">#9C27B0</color> <!-- Purple -->
+<color name="statusServed">#795548</color>    <!-- Brown -->
+</resources>

@@ -1,0 +1,134 @@
+
+Department of Information and Communication Technology
+
+I declare that I am familiar
+and will abide with the
+Assessment rules as
+indicated in the Sol Plaatje
+University Rules Book
+_____________________
+
+Signature
+
+COURSE NAME: Mobile Application
+Development/Programming II
+COURSE CODE: NMAD62110/NPRG62120
+
+Mini Project
+Due Date: 09 May 2025
+Total Marks: 150
+Total pages: 5 (including
+cover)
+Name of Examiner
+Mrs. K.E Mamabolo
+Name of Moderator
+
+Dr. Tite Tuyikeze
+Student number
+Surname Initials
+%
+IMPORTANT INSTRUCTIONS
+1. Answer ALL questions.
+2. The use of Calculator is not permitted.
+3. The use of laptops is not permitted.
+4. The use of Cellphones is not permitted.
+
+
+
+
+Problem Statement: Restaurant Management System
+In the current operational landscape of many mid-sized restaurants, such as Taste
+Haven, management is confronted with growing inefficiencies stemming from
+fragmented systems and outdated manual processes. Orders are handwritten by
+waitstaff and physically delivered to the kitchen, which introduces delays, frequent
+errors, and miscommunication. Reservations are managed through phone calls or penand-paper logs, often resulting in double-bookings or missed opportunities during highdemand periods. Furthermore, inventory tracking is handled through spreadsheets or
+verbal checks, leading to inadequate stock monitoring and reactive purchasing
+decisions. This disjointed approach hampers productivity, diminishes customer
+satisfaction, and limits managerial oversight.
+To address these systemic issues, management propose the development of a
+comprehensive Restaurant Management System (RMS) to improve the user experience
+for both their customers and staff members. The solution will digitize and integrate the
+restaurant’s core operations—order processing, table reservations, and inventory
+control—into a unified mobile-first platform. Waiters will utilize Android devices to
+capture and transmit orders in real-time to the kitchen, eliminating manual handling and
+reducing preparation delays. Customers will benefit from the ability to reserve tables and
+receive confirmations directly via a user-friendly mobile app. Managers will have access
+to up-to-date inventory levels, automated alerts for low-stock items, and real-time
+analytics to guide purchasing and staffing decisions. This integrated system ensures
+enhanced efficiency, greater data accuracy, and a significantly improved customer
+experience within the hospitality environment.
+Sample specifications are as follows:
+Sample System Modules
+1. Order Management Module
+• Waiters take orders via Android devices.
+• Orders are routed in real-time to kitchen staff's Android view.
+• Orders progress through statuses: Received → Preparing → Ready → Served.
+2. Table Reservation Module
+• Customers can view available slots and reserve tables using the app.
+• Confirmation notifications and booking history are available.
+• Staff manage and override reservations via a managerial interface.
+3. Inventory Tracking Module
+• Managers input stock levels via Android or NetBeans backend.
+• The system flags low stock items and recommends reorders.
+• Logs are maintained for ingredient usage and wastage tracking.
+4. Administrative Dashboard (Manager View)
+• Overview of sales, orders, reservations, and stock metrics.
+• Role-based access control: add/remove staff, update user roles.
+• Generate operational and performance reports.
+Sample User Requirements by Role
+User Role Functional Requirements
+Customer
+- Register/login via mobile app
+- Browse menu and make reservations
+- View reservation status
+- Receive notifications
+- Submit feedback
+Waiter
+- Authenticate via credentials
+- Place and send orders from Android devices
+- View assigned tables
+- Update order status
+Chef
+- View incoming orders with timestamps
+- Update order status: Preparing → Ready
+- See customer notes (e.g., allergies, special instructions)
+Manager
+- Add/edit menu items
+- Monitor and manage reservations
+- Track sales and stock
+- View staff activity reports
+- Assign and manage roles
+Sample Database Schema
+Table Name Description Fields
+users
+Stores all user
+accounts
+user_id (PK), name, email, password_hash, role
+(customer, waiter, chef, manager), created_at
+reservations
+Holds customer
+reservations
+reservation_id (PK), user_id (FK), reservation_date,
+reservation_time, number_of_guests, status
+(pending, confirmed, cancelled)
+menu_items
+Contains menu
+offerings
+item_id (PK), name, description, price, availability
+(BOOLEAN)
+orders
+Restaurant orders
+placed by waiters
+order_id (PK), table_number, waiter_id (FK),
+order_time, status (received, preparing, ready,
+served)
+order_items
+Line items within
+an order
+order_item_id (PK), order_id (FK), item_id (FK),
+quantity, notes
+inventory
+Tracks ingredient
+stock and alerts
+item_id (PK), item_name, quantity_in_stock,
+reorder_threshold, last_updated
