@@ -1,0 +1,21 @@
+// Plugin Management - Defines repositories for resolving plugins
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+// Dependency Resolution Management - For library dependencies
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+// Project name and included modules
+rootProject.name = "RestaurantManagementSystem"
+include ':app'
